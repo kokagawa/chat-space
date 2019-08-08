@@ -1,0 +1,254 @@
+.header {
+  background: #38aef0;
+  color: #ffffff;
+  text-align: center;
+  }
+
+.wid {
+ 
+  height: 100px;
+  width: 100vw;
+  position: relative;
+  &__use {
+    height: 100px;
+  width: 300px;
+  background: #253141;
+  }
+  &__mess {
+    width: 120px;
+    color: #ffffff;
+    font-weight: bold;
+    line-height: 8px;
+    font-size: 16spx;
+    padding: 0 20px 0 20px;
+    position: absolute;
+    left: 0px;
+        top: 47px;
+    z-index: 1;
+     }
+   &__chat {
+      height: 96px;
+      width: calc(100vw - 300px);
+      border-bottom: solid 1px #eeeeee;
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 2;
+     }
+     &__board-a { 
+      height: 35px;
+      width: 300px;
+      position: absolute;
+      top: 0;
+      left: 300px;
+      z-index: 3;
+    }  
+     &__board-b {
+       height: 15px;
+       width: 300px;
+       position: absolute;
+       top: 55px;
+       left :300px;
+       z-index: 3;
+     } 
+     &__tex {
+       width: 120px;
+       color: #333333;
+       font-size: 20px;
+       position: absolute;
+       top: 35px;
+       left: 340px;
+       z-index: 3;
+       line-height: 30px;
+     }
+     &__tex2 {
+       width: 120px;
+       color: #999999;
+       font-size: 12px;
+       position: absolute;
+       bottom: 0;
+       left: 340px;
+       z-index: 3;
+     }
+     &__edit {
+       color: #38aef0;
+       height: 40px;
+       width: 80px;
+       position: absolute;
+       top: 28px;
+       right: 40px;
+       border: solid 3px #38aef0;
+       text-align: center;
+       line-height: 40px;
+       z-index: 3;
+     }
+     &__icon {
+       color: #eeeeee;
+       position: absolute;
+       top: 40px;
+       left: 250px;
+     }
+     &__icon2{
+      color: #eeeeee;
+      position: absolute;
+      top: 40px;
+      left: 275px;
+     }
+}  
+
+.mid {
+  height: 489px;
+  width: 100vw;
+  background: #2f3e51;
+  position: relative;
+  z-index: 0;
+  &__pla0 {
+    @include note(489px, calc(100vw - 300px)); 
+    background: #fafafa;
+    position: absolute;
+    top: 0;
+    left: 300px;
+  }
+  &__pla {
+    @include note(20px, 300px);    
+  }
+  &__pla2 {
+    @include note(5px, 300px);
+  }
+  &__pla3{
+    @include note(40px, 300px);      
+  }
+  &__pla4 {
+    @include note(46px, 300px);
+    position: absolute;
+    top: 0;
+    left: 300px;
+    z-index: 1;
+  }
+  &__pla5 {
+    @include note(10px, 300px);
+    position: absolute;
+    left: 300px;
+    top: 70px;
+    z-index: 1;
+  }
+  &__pla6 {
+    @include note(40px, 300px); 
+    position: absolute;
+    left: 300px;
+    top: 103px;
+    
+  }
+  &__str {
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 0 20px 0 20px;
+  
+  }
+  &__str2 {
+  color: #ffffff;
+  font-size: 11px;
+    font-weight: bold;
+    padding: 0 20px 0 20px;
+    
+  }
+  &__str3 {
+    color: #333333;
+    font-weight: bold;
+    padding: 0 40px 0 40px;
+    position: absolute;
+    top: 46px;
+    left: 300px;
+  }
+   &__str4 {
+     width: 130;
+     font-size: 12px;
+     color: #999999;
+     position: absolute;
+     top: 50px;
+     left: 430px;
+     }
+   &__str5 {
+     color:  #333333;
+     position: absolute;
+     left: 300px;
+     top: 80px;
+     padding: 0 40px 0 40px;
+   }  
+   &__str6 {
+     color: #434a54;
+     font-size: 16px;
+     font-weight: bold;
+     position: absolute;
+     left: 300px;
+     top: 140px;
+     padding: 0 40px 0 40px;
+   }
+   &__str7 {
+     color: #434a54;
+     font-size: 14px;
+     position: absolute;
+     left: 300px;
+     top: 175px;
+     padding: 0 40px 0 40px;
+   }
+  }
+
+.op {
+  height: 90px;
+  width: 100vw;
+  background: #2f3e51;
+  position: relative;
+  z-index: 3;
+  &__bot {
+  height: 50px;
+  width: calc(100vw - 500px);
+   background: #fafafa;
+   border: solid px #808080;
+   border-top : solid 20px #808080; 
+   border-right: solid 160px #808080; 
+   border-bottom: solid 20px #808080;
+   border-left: solid 40px #808080;
+   position: absolute;
+   right: 0;
+   z-index: 1;
+  }
+  &__lef {
+    height: 70px;
+    width: 40px;
+    position: absolute;
+    top: 0;
+    left: 300px;
+    background: #808080;
+    z-index: 2;
+  }  
+  &__com {
+    width: 130px;
+    color: #434a54;
+    font-size: 16px;
+    padding-left: 50px;
+    position: absolute;
+    left: 300px;
+    top: 32px;
+    z-index: 3;
+  }
+  &__icon3 {
+    position: absolute;
+    right: 185px;
+    top: 32px;
+    z-index: 3;
+  }
+  &__btn {
+    color: #fafafa;
+    text-align: center;
+    line-height: 40px;
+    background: #38aef0;
+    height: 40px;
+    width: 90px;
+    position: absolute;
+    top: 25px;
+    right: 40px;
+    z-index: 3;
+  }
+}
