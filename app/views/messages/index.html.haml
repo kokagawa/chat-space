@@ -1,66 +1,44 @@
-.header
-  グループを作成しました
-.wid
-  .wid__use
-  .wid__mess
-    test 
-  .wid__icon
-  =link_to "https://www.facebook.com/", class: "wid__icon" do
-    = fa_icon "edit"
-  .wid__icon2    
-  =link_to "https://fontawesome.com/", class: "wid__icon2" do
-    = fa_icon "cog" 
-  .wid__chat  
-  .wid__board-a
-  .wid__tex
-    test-group
-  .wid__board-b
-  .wid__tex2
-    Menber:menber
-  .wid__edit
-    EDIT  
-.mid
-  .mid__pla
-  .mid__str
-    test
-  .mid__pla2
-  .mid__str2
-    さようなら   
-  .mid__pla3  
-  .mid__str
-    sample-group
-  .mid__pla2
-  .mid__str2
-    hello!
-  .mid__pla3  
-  .mid__str
-  .mid__pla2
-  .mid__str2
-    まだメッセージがありません
-  .mid__pla0  
-  .mid__pla4
-  .mid__str3
-    text-user
-  .mid__str4
-    2019/0804/1256
-  .mid__pla5    
-  .mid__str5
-    こんにちは
-  .mid__pla6    
-  .mid__str6
-    test
-  .mid__str7
-    さようなら  
-.op  
-  .op__bot
-  .op__lef
-  .op__com
-    type a message
-  .op__icon3
-  =link_to "https://www.facebook.com/", class: "op__icon3" do
-    = fa_icon "image "
-  .op__btn
-  =link_to "https://www.facebook.com/", class: "op__btn" do
-    = fa_icon "paper-plane"
-    
-  
+.side-bar
+  .header.clearfix
+    %h3.header__name
+      = current_user.name
+    %ul.header__lists
+      %li.list
+        = link_to new_group_path do
+          = fa_icon 'pencil-square-o', class: 'icon'
+      %li.list
+        = link_to edit_user_path(current_user) do
+          = fa_icon 'cog', class: 'icon'
+  .groups
+    - current_user.groups.each do |group|
+      .group
+        = link_to group_messages_path(group) do
+          .group__name
+            = group.name
+          .group__message
+            = group.show_last_message
+.chat
+  .header      
+    .right-header
+      .right-header__button  
+        = link_to "/groups/1/edit" do
+          = "Edit"
+    .left-header   
+      .left-header__title     
+        = @group.name
+      .left-header__members
+        Menber :
+        .member
+          mada
+  .messages
+    = render @messages
+  .form
+    = form_for [@group, @message] do |f|
+      = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+      .form__mask
+        = f.label :image, class: 'form__mask__image' do
+          = fa_icon 'picture-o', class: 'icon'
+          = f.file_field :image, class: 'hidden'
+      = f.submit 'Send', class: 'form__submit'
+
+     
