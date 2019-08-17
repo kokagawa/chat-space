@@ -109,6 +109,28 @@
     top: 0;
     left: 300px;
   }
+  
+    
+  &__name {
+    
+        color: #fff;
+        font-size: 16px;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        z-index: 2;
+      }
+  &__message {
+        color: #fff;
+        font-size: 11px;
+        
+        position: absolute;
+        top: 45px;
+        left: 20px;
+        z-index: 2;
+  }
+
+
   &__pla {
     @include note(20px, 300px);    
   }
