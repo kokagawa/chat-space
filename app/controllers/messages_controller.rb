@@ -14,7 +14,6 @@ class MessagesController < ApplicationController
         format.json
       end
     else
-      //
     end
 end
 
