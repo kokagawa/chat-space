@@ -29,7 +29,8 @@
       .left-header__members
         Menber :
         .member
-          mada
+          - @group.users.each do |user|
+            = user.name
   .messages
     = render @messages
   .form
