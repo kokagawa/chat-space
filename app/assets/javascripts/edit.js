@@ -1,4 +1,4 @@
-$(document).on('turbolinks:load', function(){
+$(document).on( function(){
 
   var search_list = $("#user-search-result");
   var member_list = $(".chat-group-form__field--op");
