@@ -1,7 +1,7 @@
 $(document).on('turbolinks:load', function(){
 
   var search_list = $("#user-search-result");
-  var member_list = $(".chat-group-form__field--op");
+  var member_list = $("#member-search-result");
 
   function appendUser(user){
       var html = 
@@ -36,7 +36,7 @@ member_list.append(html)
       url: ' /users',
       data: { keyword: input },
       dataType: 'json'
-})
+    })
 
     .done(function(users) {
       $("#user-search-result").empty();
@@ -46,37 +46,26 @@ member_list.append(html)
       });
     }
       else {    
-        $('# $("span#idTestDetach").detach();').empty(); 
+        $('#user-search-result').empty(); 
                 appendErrMsgToHTML("一致するユーザーが見つかりません"); 
-    }
-   
-    })
+           }
+        })
+
     .fail(function() {
       alert('ユーザー検索に失敗しました');
+    });
   });
 
- 
-   
-  });
   $(document).on('click', '.chat-group-user__btn--add' , function(user) {
-    
-    
-    
-   
     const user_name = $(this).data('user-name');
     const user_id = $(this).data('user-id');
-     $(this).parent().remove();
-    
-  appendMember(user_id, user_name);
-  
- });
+    $(this).parent().remove();
+    appendMember(user_id, user_name);
+  });
+
 $(document).on('click', '.chat-group-user__btn--remove' , function(user) {
   var user_name = $(this).data('user-name');
     var user_id = $(this).data('user-id');
    $(this).parent().remove();
-   
-  
-
-  
-});
+   });
 });
