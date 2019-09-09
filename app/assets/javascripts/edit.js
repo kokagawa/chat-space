@@ -46,7 +46,7 @@ member_list.append(html)
       });
     }
       else {    
-        $('#user-search-result').empty(); 
+        $('# $("span#idTestDetach").detach();').empty(); 
                 appendErrMsgToHTML("一致するユーザーが見つかりません"); 
     }
    
@@ -65,12 +65,18 @@ member_list.append(html)
    
     const user_name = $(this).data('user-name');
     const user_id = $(this).data('user-id');
-    $(this).parent().remove();
+     $(this).parent().remove();
     
   appendMember(user_id, user_name);
   
  });
 $(document).on('click', '.chat-group-user__btn--remove' , function(user) {
-  $(this).parent().remove();
+  var user_name = $(this).data('user-name');
+    var user_id = $(this).data('user-id');
+   $(this).parent().remove();
+   
+  
+
+  
 });
 });
