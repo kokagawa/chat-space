@@ -26,6 +26,8 @@ function appendMember(user_id, user_name){
   <div class='user-search-remove chat-group-user__btn chat-group-user__btn--remove js-remove-btn'>削除</div>
 </div>`;
 member_list.append(html)
+$(this).parent().remove("current_user.id");
+
 }
 
   $("#user-search-field").on("keyup", function() {

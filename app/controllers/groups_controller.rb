@@ -17,8 +17,9 @@ class GroupsController < ApplicationController
     end
     
   end
-  
+
 def edit
+  
 end
  
 
