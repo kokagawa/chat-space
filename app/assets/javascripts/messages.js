@@ -1,5 +1,6 @@
 $(document).on('turbolinks:load', function(){
   function buildHTML(message) {
+   
     var content = message.content ? `${ message.content }` : "";
     image = (message.image) ? `<img class= "lower-message__image" src=${message.image} >` : ""; 
 
@@ -25,7 +26,8 @@ $(document).on('turbolinks:load', function(){
     e.preventDefault();
     var message = new FormData(this); 
     var url = (window.location.href);
-    message.toLocaleString();
+   
+   
     $.ajax({  
       url: url,
       type: 'POST',
